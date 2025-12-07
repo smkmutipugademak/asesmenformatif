@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Interaktif Modern</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="quiz-header">
+            <h1>Ujian Informatika & Pemrograman</h1>
+            <p>Silakan kerjakan soal di bawah ini dengan teliti.</p>
+        </header>
+
+        <form id="quizForm">
+            <div id="quiz-container"></div>
+
+            <button type="button" id="submitBtn" class="btn-primary">Kirim Jawaban & Lihat Nilai</button>
+        </form>
+    </div>
+
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="scoreIcon">🏆</div>
+            <h2>Hasil Akhir</h2>
+            <p id="scoreText">Skor: 0</p>
+            <div id="scoreDetail"></div>
+
+            <div class="modal-buttons">
+                <button id="reviewBtn" class="btn-review">Lihat Pembahasan</button>
+                <button class="btn-secondary" onclick="location.reload()">Coba Lagi</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

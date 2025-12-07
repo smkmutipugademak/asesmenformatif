@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="quiz-header">
+            <h1>Ujian Kompetensi Dasar</h1>
+            <p>Jawablah pertanyaan di bawah ini dengan benar.</p>
+        </header>
+
+        <form id="quizForm">
+            <div class="question-card" id="q1">
+                <div class="question-title">
+                    <span class="q-number">01</span>
+                    <h3>Apa kepanjangan dari HTML?</h3>
+                </div>
+                <div class="options-group">
+                    <label class="option">
+                        <input type="radio" name="q1" value="A">
+                        <span class="circle">A</span>
+                        <span class="text">Hyper Text Markup Language</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q1" value="B">
+                        <span class="circle">B</span>
+                        <span class="text">High Tech Multi Level</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q1" value="C">
+                        <span class="circle">C</span>
+                        <span class="text">Hyper Transfer Mode List</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q1" value="D">
+                        <span class="circle">D</span>
+                        <span class="text">Hybrid Text Marking Line</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q1" value="E">
+                        <span class="circle">E</span>
+                        <span class="text">Hyper Tool Multi Language</span>
+                    </label>
+                </div>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="question-card" id="q2">
+                <div class="question-title">
+                    <span class="q-number">02</span>
+                    <h3>Properti CSS untuk mengubah warna teks adalah?</h3>
+                </div>
+                <div class="options-group">
+                    <label class="option">
+                        <input type="radio" name="q2" value="A">
+                        <span class="circle">A</span>
+                        <span class="text">font-color</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q2" value="B">
+                        <span class="circle">B</span>
+                        <span class="text">text-style</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q2" value="C">
+                        <span class="circle">C</span>
+                        <span class="text">color</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q2" value="D">
+                        <span class="circle">D</span>
+                        <span class="text">background-color</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q2" value="E">
+                        <span class="circle">E</span>
+                        <span class="text">text-color</span>
+                    </label>
+                </div>
+                <div class="feedback"></div>
+            </div>
+
+            <div class="question-card" id="q3">
+                <div class="question-title">
+                    <span class="q-number">03</span>
+                    <h3>Manakah yang bukan merupakan bahasa pemrograman?</h3>
+                </div>
+                <div class="options-group">
+                    <label class="option">
+                        <input type="radio" name="q3" value="A">
+                        <span class="circle">A</span>
+                        <span class="text">Python</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q3" value="B">
+                        <span class="circle">B</span>
+                        <span class="text">Java</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q3" value="C">
+                        <span class="circle">C</span>
+                        <span class="text">HTML</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q3" value="D">
+                        <span class="circle">D</span>
+                        <span class="text">JavaScript</span>
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="q3" value="E">
+                        <span class="circle">E</span>
+                        <span class="text">C++</span>
+                    </label>
+                </div>
+                <div class="feedback"></div>
+            </div>
+
+            <button type="button" id="submitBtn" class="btn-primary">Lihat Hasil Nilai</button>
+        </form>
+    </div>
+
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="scoreIcon">🏆</div>
+            <h2>Hasil Kuis Anda</h2>
+            <p id="scoreText">Skor: 0</p>
+            <div id="scoreDetail"></div>
+            <button class="btn-secondary" onclick="location.reload()">Coba Lagi</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

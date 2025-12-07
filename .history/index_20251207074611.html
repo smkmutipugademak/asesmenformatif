@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ujian Informatika Modern</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-shapes"></div>
+
+    <div class="container">
+<div id="startScreen" class="start-screen-card">
+            <h1>Selamat Datang</h1>
+            <p>Silakan masukkan nama Anda untuk memulai:</p>
+            
+            <div style="margin-bottom: 20px;">
+                <input type="text" id="inputNama" class="input-modern" placeholder="Ketik Nama Lengkap Anda..." autocomplete="off">
+            </div>
+
+            <p style="font-size: 0.9rem; color: #64748b;">Peraturan:</p>
+            <ul style="text-align: left; margin-bottom: 20px; color: #64748b; font-size: 0.9rem;">
+                <li>Waktu pengerjaan adalah 15 menit.</li>
+                <li>Dilarang merefresh halaman.</li>
+                <li>Nilai akan otomatis terkirim ke guru.</li>
+            </ul>
+            <button id="btnStart" class="btn-primary">MULAI UJIAN SEKARANG</button>
+        </div>
+
+        <div id="quizInterface" style="display: none;">
+            <div class="timer-container" id="timerContainer">
+                <div class="timer-pill" id="timerPill">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span id="timeDisplay">15:00</span>
+                </div>
+            </div>
+
+            <header class="quiz-header">
+                <div class="header-content">
+                    <h1>Asesmen Formatif Sistem Komputer</h1>
+                    <p>Jawablah pertanyaan berikut dengan tepat.</p>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-label">
+                        <span>Progres</span>
+                        <span id="progress-text">0%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" id="progressBar"></div>
+                    </div>
+                </div>
+            </header>
+
+            <form id="quizForm">
+                <div id="quiz-container"></div>
+                <div class="action-area">
+                    <button type="button" id="submitBtn" class="btn-primary" disabled>
+                        Selesaikan soal dulu...
+                    </button>
+                    <button type="button" id="restartBtn" class="btn-restart" style="display: none;">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+                            </path>
+                        </svg>
+                        <span>Ulangi Ujian</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="resultModal" class="modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="score-badge" id="scoreBadge"><span id="scoreIcon">🏆</span></div>
+            <h2>Hasil Evaluasi</h2>
+            <div class="score-display">
+                <span id="scoreText">0</span>
+                <span class="score-total">/ 100</span>
+            </div>
+            <p id="scoreDetail" class="score-detail">Detail skor...</p>
+            <div class="modal-buttons">
+                <button id="reviewBtn" class="btn-outline">Lihat Pembahasan</button>
+                <button class="btn-primary" onclick="location.reload()">Coba Lagi</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
